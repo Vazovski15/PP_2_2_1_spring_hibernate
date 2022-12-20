@@ -39,7 +39,6 @@ public class MainApp {
 
       Car car= new Car("FIAT",10);
          System.out.println(userDaoImp.carToUser(car));
-
       }
 
       context.close();
