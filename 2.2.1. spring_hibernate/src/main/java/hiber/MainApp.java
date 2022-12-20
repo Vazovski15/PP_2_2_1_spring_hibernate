@@ -38,8 +38,7 @@ public class MainApp {
          System.out.println("-------------------------");
 
       Car car= new Car("FIAT",10);
-
-         System.out.println(car);
+         System.out.println(userService.carToUser(car));
       }
 
       context.close();
