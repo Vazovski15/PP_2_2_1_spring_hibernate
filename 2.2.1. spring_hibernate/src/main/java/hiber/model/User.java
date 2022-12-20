@@ -79,11 +79,12 @@ public class User {
       this.carUser = carUser;
    }
 
+
+
    @Override
    public String toString() {
       return "User{" +
-              "id=" + id +
-              ", firstName='" + firstName + '\'' +
+              "firstName='" + firstName + '\'' +
               ", lastName='" + lastName + '\'' +
               ", email='" + email + '\'' +
               ", carUser=" + carUser +
