@@ -33,7 +33,6 @@ public class User {
       this.email = email;
    }
    public User(String firstName, String lastName, String email, Car carUser) {
-      this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;
       this.email = email;
@@ -78,5 +77,16 @@ public class User {
 
    public void setCarUser(Car carUser) {
       this.carUser = carUser;
+   }
+
+   @Override
+   public String toString() {
+      return "User{" +
+              "id=" + id +
+              ", firstName='" + firstName + '\'' +
+              ", lastName='" + lastName + '\'' +
+              ", email='" + email + '\'' +
+              ", carUser=" + carUser +
+              '}';
    }
 }
