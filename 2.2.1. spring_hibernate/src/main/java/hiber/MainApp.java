@@ -1,8 +1,10 @@
 package hiber;
 
 import hiber.config.AppConfig;
+import hiber.dao.UserDaoImp;
 import hiber.model.Car;
 import hiber.model.User;
+
 import hiber.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -13,6 +15,9 @@ public class MainApp {
    public static void main(String[] args) throws SQLException {
       AnnotationConfigApplicationContext context = 
             new AnnotationConfigApplicationContext(AppConfig.class);
+      UserDaoImp userDaoImp = new UserDaoImp();
+
+
 
       UserService userService = context.getBean(UserService.class);
 
@@ -30,9 +35,14 @@ public class MainApp {
          System.out.println("Last Name = "+user.getLastName());
          System.out.println("Email = "+user.getEmail());
          System.out.println("Car = "+user.getCarUser());
-         System.out.println();
+         System.out.println("-------------------------");
+
+      Car car= new Car("FIAT",10);
+         System.out.println(userDaoImp.carToUser(car));
+
       }
 
       context.close();
+
    }
 }
